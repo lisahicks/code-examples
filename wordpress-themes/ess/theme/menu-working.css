@@ -1,0 +1,23 @@
+.genesis-nav-menu > li:hover, .genesis-nav-menu > a:hover {
+	background-color: rgba(44, 116, 180, 1.0);
+	border-top-left-radius: 0px !important;
+	border-top-right-radius:  0px !important;
+}
+.genesis-nav-menu > .menu-item > ul.sub-menu { 
+	background-color: rgba(44, 116, 180, 1.0);
+	border-top-right-radius:  0px !important;
+	border-bottom-left-radius:  0px !important;
+	border-bottom-right-radius:  0px !important;
+}
+.genesis-nav-menu ul.sub-menu > li > ul.sub-menu > li { 
+	width: 165px;
+	background-color: rgba(113, 112, 115, 1.0) !important;
+}
+.genesis-nav-menu ul.sub-menu > li > ul.sub-menu > li:first-child { 
+	border-top-right-radius: 0px !important;
+	border-top-left-radius: 0px !important;
+}
+.genesis-nav-menu ul.sub-menu > li > ul.sub-menu > li:last-child { 
+	border-bottom-left-radius: 0px !important;
+	border-bottom-right-radius:  0px !important;
+}

@@ -1,0 +1,36 @@
+var content = $('.contentBox');
+var sidebar = $('.sidebarBox');
+var count = 0;
+var myTimer;
+
+function setEqualContainer() {
+	var getContentHeight = content.outerHeight();
+	var getSidebarHeight = sidebar.outerHeight();
+
+	if ( getContentHeight > getSidebarHeight ) {
+		sidebar.css('min-height', getContentHeight);
+	}
+
+	if ( getSidebarHeight > getContentHeight ) {
+		content.css('min-height', getSidebarHeight);
+	}
+}
+
+// creating the timer which will run every 500 milliseconds
+// and will stop after the container will be loaded
+// ...or after 15 seconds to not eat a lot of memory
+
+myTimer = setInterval( function() {
+	count++;
+
+	if ( $('.testContainer').length == 0 ) {
+		setEqualContainer();
+	} else {
+		setEqualContainer();
+		clearInterval(myTimer);
+	}
+
+	if ( count == 15) {
+		clearInterval(myTimer);
+	}
+}, 500);
